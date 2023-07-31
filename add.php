@@ -75,7 +75,7 @@
                     }),
                     success: function() {
                         Swal.fire({
-                                text: "Employee added successfully.",
+                                text: "User added successfully.",
                                 icon: "success",
                                 buttonsStyling: false,
                                 confirmButtonText: "OK",
