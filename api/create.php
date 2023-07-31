@@ -9,7 +9,12 @@
     $item->email = $data->email;
     $item->age = $data->age;
     $item->designation = $data->designation;
-    $item->created = date('Y-m-d H:i:s');
+    $currentDateTimeUTC = new DateTime('now', new DateTimeZone('UTC'));
+    $targetTimeZone = new DateTimeZone('Asia/Manila'); // You can use 'Asia/Manila', 'Asia/Kuala_Lumpur', or other timezone strings.
+    $currentDateTimeGMTPlus8 = $currentDateTimeUTC->setTimezone($targetTimeZone);
+    $createdDateTimeFormatted = $currentDateTimeGMTPlus8->format('Y-m-d h:i:s A');
+    $item->created = $createdDateTimeFormatted;
+
     
     if($item->createEmployee()){
         echo 'Employee created successfully.';
