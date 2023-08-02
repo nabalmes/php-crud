@@ -5,6 +5,4 @@
         private $username = "root";
         private $password = "password";
         public $conn;
-       
-    }  
 ?>
