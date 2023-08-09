@@ -1,5 +1,4 @@
 <?php
-    header("Access-Control-Allow-Origin: *");
     header("Content-Type: application/json; charset=UTF-8");
     
     include_once '../config/database.php';
@@ -10,7 +9,7 @@
     $stmt = $items->getEmployees();
     $itemCount = $stmt->rowCount();
 
-    echo json_encode($itemCount);
+    // echo json_encode($itemCount);
     if($itemCount > 0){
         
         $employeeArr = array();
