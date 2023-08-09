@@ -10,7 +10,7 @@
 </head>
 
 <body>
-    <div class="container my-6">
+    <div id="add-modal" class="container my-6">
         <form method="post">
             <div class="mb-3">
                 <label for="name" class="form-label">Name</label>
